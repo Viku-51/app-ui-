@@ -1,0 +1,5 @@
+{
+  "devDependencies": {
+    "mockserver-node": "^5.13.2"
+  }
+}

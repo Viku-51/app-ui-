@@ -36,3 +36,31 @@ engine.setModel(model);
 
 <CanvasWidget engine={engine} />   
 
+const YourDiagram = () => (
+    <Diagram initState={{
+        nodes: [
+          {
+            id: "node_1",
+            position: [300, 300],
+            type: "output_horizontal" // there are other built-in types, such as input_output_horizontal, input_output_vertical, input_vertical, input_horizontal, output_vertical, star. You can also provide your own types in settings.
+          },
+          {
+            id: "node_2",
+            position: [520, 400],
+            type: "input_horizontal" 
+          },
+        ],
+        links: [
+          {
+            source: {
+              nodeId: "node_1",
+              portId: "output"
+            },
+            target: {
+              nodeId: "node_2",
+              portId: "input"
+            }
+          },
+        ]
+      }} />
+);
